@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Serving web contents</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="/css/bootstrap.css" />
+    <style>
+        body{
+            font-family: "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+    <div align="center" class="container">
+        <h2>Form</h2>
+        <hr/>
+
+        <form th:action="@{/}" th:object="${person}" method="POST" th:class="form-group">
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td><input type="text" th:field="*{id}"/></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" th:field="*{name}"/></td>
+                </tr>
+                <tr colspan="2"><td><input type="submit" value="Submit"/></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

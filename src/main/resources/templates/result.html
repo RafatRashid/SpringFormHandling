@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Datas</title>
+    <link rel="stylesheet" href="/resources/static/css/bootstrap.css" />
+    <style>
+        body{
+            font-family: "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+    <div align="center" class="container">
+        <h2 class="h2">Form Result</h2>
+        <p th:text="'Id: '+${person.id}"></p>
+        <p th:text="'Name: '+${person.name}"></p>
+        <a href="/" class="button button">Home</a>
+    </div>
+</body>
+</html>
